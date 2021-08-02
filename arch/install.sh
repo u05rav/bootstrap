@@ -15,7 +15,7 @@ echo "arch install script"
 echo 'type=83' | sudo sfdisk /dev/sda
 
 # format the partition as ext4
-mkfs.ext4 /dev
+mkfs.ext4 /dev/sda1
 
 # mount the new partition
 mount /dev/root_partition /mnt
