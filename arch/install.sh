@@ -50,7 +50,7 @@ echo 127.0.1.1 $HOSTNAME > /etc/hosts
 passwd
 
 # setup bootloader
-pacman -S grub
+pacman -Sy grub --noconfirm
 grub-install --target=i386-pc /dev/sda
 
 
