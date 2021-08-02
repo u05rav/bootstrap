@@ -18,7 +18,7 @@ echo 'type=83' | sudo sfdisk /dev/sda
 mkfs.ext4 /dev/sda1
 
 # mount the new partition
-mount /dev/root_partition /mnt
+mount /dev/sda1 /mnt
 
 # install basic packages
 pacstrap /mnt base linux linux-firmware vim bash
