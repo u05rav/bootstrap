@@ -21,7 +21,7 @@ mkfs.ext4 /dev/sda1
 mount /dev/root_partition /mnt
 
 # install basic packages
-pacstrap /mnt base linux linux-firmware grub vim
+pacstrap /mnt base linux linux-firmware vim
 
 # generate fstab
 genfstab -U /mnt >> /mnt/etc/fstab
@@ -50,6 +50,7 @@ echo 127.0.1.1 $HOSTNAME > /etc/hosts
 passwd
 
 # setup bootloader
+pacman -S grub
 grub-install --target=i386-pc /dev/sda
 
 
