@@ -27,7 +27,7 @@ pacstrap /mnt base linux linux-firmware vim
 genfstab -U /mnt >> /mnt/etc/fstab
 
 # chroot to new system
-arch-chroot /mnt
+arch-chroot /mnt /bin/bash -- << INSTALL_DOC
 
 # set timezone to Pacific
 ln -sf /usr/share/zoneinfo/US/Pacific /etc/localtime
@@ -53,5 +53,6 @@ passwd
 pacman -Sy grub --noconfirm
 grub-install --target=i386-pc /dev/sda
 
+INSTALL_DOC
 
 
