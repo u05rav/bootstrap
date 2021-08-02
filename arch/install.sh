@@ -21,7 +21,7 @@ mkfs.ext4 /dev/sda1
 mount /dev/root_partition /mnt
 
 # install basic packages
-pacstrap /mnt base linux linux-firmware vim
+pacstrap /mnt base linux linux-firmware vim bash
 
 # generate fstab
 genfstab -U /mnt >> /mnt/etc/fstab
