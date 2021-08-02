@@ -27,7 +27,7 @@ pacstrap /mnt base linux linux-firmware vim
 genfstab -U /mnt >> /mnt/etc/fstab
 
 # chroot to new system
-arch-chroot /mnt /bin/bash -- << INSTALL_DOC
+arch-chroot /mnt /bin/bash -- <<INSTALL_DOC
 
 # set timezone to Pacific
 ln -sf /usr/share/zoneinfo/US/Pacific /etc/localtime
